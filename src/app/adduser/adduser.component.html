@@ -1,0 +1,42 @@
+<app-header></app-header>
+
+<div class="content-wrapper">
+    <section class="content">
+        <h2><p style="text-align:center;">
+        Add New User
+        </p></h2> 
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)]="email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password" [(ngModel)]="password">
+  </div> 
+   <div class="form-group">
+          <label for="Your Name">Name</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" name="name" [(ngModel)]="name">
+        </div>
+        <div class="form-group">
+              <label for="exampleInputPassword1">Gender</label>
+              <input type="radio" name="gender" value="male" [(ngModel)]="gender"> Male
+           <input type="radio" name="gender" value="female" [(ngModel)]="gender"> Female
+            </div> 
+             <div class="form-group">
+                    <label for="Your Name">Image</label>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="User Image Path" name="image" [(ngModel)]="image">
+                  </div>
+                  <div class="form-group">
+                          <label for="Your Name">Mobile No</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Mobile Number of user" name="mob" [(ngModel)]="mob">
+                        </div>
+                        <div class="form-group">
+                              <label for="Your Name">Address</label>
+                              <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Full Address" name="address" [(ngModel)]="address">
+                            </div>
+                            <p style="text-align:center;">
+  <button type="submit" class="btn btn-primary" (click)="signUp()">Add User</button>
+  </p>
+ </section>
+ </div>

@@ -1,0 +1,62 @@
+<app-header></app-header>
+
+<div class="content-wrapper">
+  <section class="content">
+    <h2>
+      <p style="text-align:center;">
+        Add New Product 
+      </p>
+    </h2>
+    <!--<div class="form-group">
+      <label for="exampleInputEmail1">Product Id</label>
+      <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter product ID"
+        name="email" [(ngModel)]="pro_id">
+    </div>-->
+    <form name="myForm">
+    <div class="form-group">
+      <label for="Your Name">Product Name</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Product Name" name="name" [(ngModel)]="name"  required>
+    </div>
+    <div class="form-group">
+      <label for="Your Name">Product Price</label>
+      <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Enter Product Price" name="price" [(ngModel)]="price">
+    <!--  <span ng-show="myForm.price.$touched && myForm.price.$invalid">The name is required.</span>-->
+    </div>
+    <div class="form-group">
+      <label for="Your Name">Product Color</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Product Color" name="name" [(ngModel)]="color">
+    </div>
+    <div class="form-group">
+      <label for="Your Name">Image1</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Product Image Path" name="image" [(ngModel)]="img1">
+    </div>
+    <div class="form-group">
+      <label for="Your Name">Image2</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Product Image Path" name="image" [(ngModel)]="img2">
+    </div>
+    <div class="form-group">
+      <label for="Your Name">Image3</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Product Image Path" name="image" [(ngModel)]="img3">
+    </div>
+
+    <div class="form-group">
+      <label for="Your Name">Description</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Description of the Product" name="mob" [(ngModel)]="desci">
+    </div>
+    <!--   <div class="form-group">
+                              <label for="Your Name">Category ID</label>
+                              <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Full Address" name="address" [(ngModel)]="cat_id">
+                            </div>-->
+    <div class="form-group">
+      <select [(ngModel)]="fk_cat_id" value="Select Category" name="sel">
+        <option *ngFor="let item of cat" value="{{item.pk_cat_id}}">
+          {{item.cat_name}}
+        </option>
+      </select>
+    </div>
+    <p style="text-align:center; ">
+      <button type="submit " class="btn btn-primary " (click)="menadd() ">Add Product</button>
+    </p>
+  </form>
+  </section>
+</div>

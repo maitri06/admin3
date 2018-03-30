@@ -1,0 +1,86 @@
+<!--<app-header></app-header>-->
+
+       <!-- <body class="skin-blue">
+            
+
+     
+        <section class="content">
+      <p style="text-align:center;">
+                  <img src="./assets/images/wardrobe.png" align="middle" />            
+               
+      </p>
+      <hr><br>
+                  <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control"  placeholder="Email" [(ngModel)]="email_id" required/>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control"  placeholder="Password" [(ngModel)]="password">
+                    </div>
+                  </div>
+                  <p style="text-align:center;">
+                              <button type="submit" class="btn btn-primary mb-2" (click)="onLogin()">Login</button>
+                              <a routerLink="/forgot" >Forget password?</a>
+                  </p> 
+                  <hr>
+                  <p style="text-align:center;">
+                   
+                   <button type="submit" class="btn btn-primary mb-2">Register</button>
+        </p>  
+          </section>-->
+          <form (ngSubmit)="taskSubmit()" #addform="ngForm" >
+
+         
+          <p style="text-align:center;">
+             <img src="./assets/images/wardrobe.png" align="middle" />            
+          </p>
+        <table align="center" class="table">
+            <mat-form-field hintLabel="eg.a@gmail.com"  class="example-full-width">
+              <input
+              matInput
+              ngModel
+              required
+              email
+              [(ngModel)]="email_id"
+              name="inpemail"
+               type="email"
+               placeholder="email"
+               #inpemail="ngModel">
+               <mat-error *ngIf="inpemail.hasError('required')" >Email must Require</mat-error>
+               <mat-error *ngIf="!inpemail.hasError('required')" >Wrong Email Address</mat-error>
+
+            </mat-form-field>
+            <br><br>
+            <mat-form-field  class="example-full-width">
+              <input
+              matInput
+              ngModel
+              required
+              minlength="6"
+              name="inpPass"
+              [(ngModel)]="password"
+               type="password"
+               placeholder="password"
+               #inpPass="ngModel">
+               <mat-error *ngIf="inpPass.hasError('required')"  >Password must Require!</mat-error>
+              <mat-hint align="end"> {{inpPass.value?.length}}/7 </mat-hint>
+            </mat-form-field>
+            <div class="button-row">
+              <button mat-raised-button color="primary" [disabled]="!addform.form.valid">Login</button>
+            </div>
+            <a routerLink="/forgot" class="link">Forget password?</a>
+          </table>
+          </form>
+          
+          
+          
+          
+          
+          
+          
+          
+          

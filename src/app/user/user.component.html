@@ -1,0 +1,60 @@
+      <app-header></app-header>
+      <div class="content-wrapper">
+        <section class="content">
+          <h1>Users</h1>
+          <div>
+            <div class="col-sm-10">
+              <input class="form-control " [(ngModel)]="txtsearch" (keyup)="onSearch()" text name="search " placeholder="search User Name">
+            </div>
+            <!--<a routerLink="/adduser">Add</a>-->
+            <div class="col-sm-2">
+              <p align="right">
+                  
+                  <!--<td><img src="../.././assets/glyphicons_free/glyphicons/png/glyphicons-7-user-add.png" routerLink="/adduser"></td>-->
+               <!-- <input type="button" value="Add New User" />-->
+              </p>
+            </div>
+            
+          </div>
+          
+      <table class="table">
+        <thead>
+          
+          <tr>
+              <th scope="col">Select</th>
+            <th scope="col">User Name</th>
+            <th scope="col">Email Id</th>
+            <th scope="col">Mobile Number</th>
+            <th scope="col">Address</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of user">
+            <td>
+              <input type="checkbox" (change)="chkchng(item)"/>
+            </td>
+            <td>{{item.u_name}}</td>
+            <td>{{item.pk_email_id}}</td>
+           
+            <td>{{item.u_mobile_no}}</td>
+            <td>{{item.u_address}}</td>
+            <td><!--<img src="../.././assets/glyphicons_free/glyphicons/png/glyphicons-151-edit.png" (click)="editUser(item)">-->&nbsp;&nbsp;
+              &nbsp;&nbsp;<img src="../.././assets/glyphicons_free/glyphicons/png/glyphicons-8-user-remove.png" (click)="onDeleteUser(item)"></td>
+            
+         
+          </tr>
+          <tr>
+            <td>
+              <button (click)="delAll()">Delete All</button>
+            </td>
+          </tr>
+        </tbody>
+      </table> 
+      </section>
+      </div>
+
+
+
+
+

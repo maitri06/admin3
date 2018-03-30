@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="content-wrapper">
+    <section class="content">
+
+    <div class="form-group">
+           <label for="Your Name">Name</label>
+           <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Product Name" name="name" [(ngModel)]="name" [(ngModel)]="name">
+         </div>
+              <div class="form-group">
+                     <label for="Your Name">Price</label>
+                     <input type="text" class="form-control" [(ngModel)]="price" [(ngModel)]="price" id="exampleInputPassword1" placeholder="Product Price" name="image" >
+                   </div>
+                   <div class="form-group">
+                           <label for="Your Name">Description</label>
+                           <input type="text" class="form-control" [(ngModel)]="desci" [(ngModel)]="desci" id="exampleInputPassword1" placeholder="Product Description" name="mob" >
+                         </div>
+                             <p style="text-align:center;">
+   <button type="submit" class="btn btn-primary" (click)="onMenUpdate()">Submit</button>
+  </p>
+</section>
+</div>

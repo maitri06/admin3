@@ -1,0 +1,84 @@
+<!-- <app-header></app-header>
+    <div class="content-wrapper">
+      <section class="content">
+          <h1>Orderlist</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Order Date</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Email Id</th>
+          <th scope="col">Product Id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of order">
+          <td>{{item.date | date:'shortDate'}}</td>
+          <td>{{item.qty}}</td>
+          <td>{{item.email_id}}</td>
+          <td>{{item.pro_id}}</td>
+        </tr>
+      </tbody>
+    </table>  
+    </section>
+    </div> 
+    
+    
+    <div class="content-wrapper">
+        <section class="content">
+            <h1>Orderlist</h1> 
+<div class="example-container mat-elevation-z8" >
+    <mat-table #table [dataSource]="dataSource" >
+      <a *ngFor="let item of order"></a>
+     
+      <ng-container matColumnDef="date" >
+        <mat-header-cell *matHeaderCellDef> date </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{item.date}} </mat-cell>
+      </ng-container>
+    
+      <ng-container matColumnDef="Quentity">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Quentity </mat-header-cell>
+        <mat-cell *matCellDef="let item"> {{item.qty}} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator #paginator
+    [pageSize]="2"
+    [pageSizeOptions]="[2,5,10]">
+  </mat-paginator>
+  </div>
+  </section>
+  </div>
+
+-->
+<app-header></app-header>
+    <div class="content-wrapper">
+      <section class="content">
+          <h1>Orderlist</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Order Date</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Email Id</th>
+          <th scope="col">Product Id</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of order">
+          <td>{{item.date | date:'shortDate'}}</td>
+          <td>{{item.qty}}</td>
+          <td>{{item.email_id}}</td>
+          <td>{{item.pro_id}}</td>
+        </tr>
+      </tbody>
+    </table>  
+    </section>
+    </div>
+
+
+
+  
+  

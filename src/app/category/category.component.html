@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="content-wrapper">
+  <section class="content">
+      <div>
+          <h1>Category</h1>
+          <div class="col-sm-10">
+             
+            <input class="form-control " [(ngModel)]="txtsearch" (keyup)="onSearchCategory() " text name="search " placeholder="search Category Name">
+          </div>
+          <!--<a routerLink="/adduser">Add</a>-->
+          <div class="col-sm-2">
+            <p align="right">
+                <img src="../.././assets/glyphicons_free/glyphicons/png/glyphicons-191-plus-sign.png"  routerLink="/addcat"/>
+               
+            </p>
+          </div>
+          
+        </div>
+       
+   
+<table class="table">
+  <thead> 
+    <tr>
+      <th scope="col">Category Id </th>
+      <th scope="col">Category Name</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of category">
+      <td>{{item.pk_cat_id}}</td>
+      <td>{{item.cat_name}}</td>
+      <td> <img src="../.././assets/glyphicons_free/glyphicons/png/glyphicons-193-remove-sign.png" (click)="onDeleteCategory(item)"></td>
+     
+    </tr>
+  </tbody>
+</table>  
+</section>
+</div>
