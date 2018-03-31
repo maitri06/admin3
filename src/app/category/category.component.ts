@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class CategoryComponent implements OnInit {
   public category:category[]=[];
   public cat1:category[]=[];
-
+  i:number=0;
   delarr:category[]=[];
   txtsearch:string="";
 
@@ -64,14 +64,14 @@ export class CategoryComponent implements OnInit {
      console.log(this.delarr);
       if(confirm("Are You Sure want to delete?"))
       {
-      this._data.delAllFeedback (this.delarr).subscribe(
+      this._data.delAllCat (this.delarr).subscribe(
         
           (data:any)=>{
             
             for(this.i=0 ; this.i<this.delarr.length ; this.i++)
             {
                
-                   this.feedback.splice(this.feedback.indexOf(this.delarr[this.i]),1);
+                   this.category.splice(this.category.indexOf(this.delarr[this.i]),1);
                  
             }
             

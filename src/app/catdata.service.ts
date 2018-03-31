@@ -20,7 +20,7 @@ export class CatdataService {
     let body=JSON.stringify(cat);
     return this._http.post(this.url,body,{headers:new HttpHeaders().set('Content-Type','application/json')});
   }
-  delAllProd(cat:category[])
+  delAllCat(cat:category[])
   {
     console.log(category);
     let body=JSON.stringify(cat);
