@@ -21,18 +21,23 @@
 <table class="table">
   <thead> 
     <tr>
-      <th scope="col">Category Id </th>
+      <th scope="col"> </th>
       <th scope="col">Category Name</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let item of category">
-      <td>{{item.pk_cat_id}}</td>
+      <td> <input type="checkbox" (change)="chkchng(item)"/></td>
       <td>{{item.cat_name}}</td>
       <td> <img src="../.././assets/glyphicons_free/glyphicons/png/glyphicons-193-remove-sign.png" (click)="onDeleteCategory(item)"></td>
      
     </tr>
+    <tr>
+        <td>
+          <button (click)="delAll()">Delete All</button>
+        </td>
+      </tr>
   </tbody>
 </table>  
 </section>

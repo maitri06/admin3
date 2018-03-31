@@ -7,7 +7,7 @@ import { category } from "./category/categorymodel";
 export class CatdataService {
 
   public url: string = "http://localhost:3000/category/";
- 
+  urldel:string="http://localhost:3000/delallcat/";
 
   constructor(public _http: HttpClient) { }
   getAllCategory() {
@@ -19,5 +19,12 @@ export class CatdataService {
   addCategory(cat:category){
     let body=JSON.stringify(cat);
     return this._http.post(this.url,body,{headers:new HttpHeaders().set('Content-Type','application/json')});
+  }
+  delAllProd(cat:category[])
+  {
+    console.log(category);
+    let body=JSON.stringify(cat);
+    return this._http.post(this.urldel,body,{headers:new HttpHeaders().set('Content-Type','application/json')});
+  
   }
 } 

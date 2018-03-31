@@ -24,7 +24,7 @@ i:number=0;
     )
   } 
   onDeleteFeedback(item){
-    this._data.deleteFeedback(item.f_id).subscribe(
+    this._data.deleteFeedback(item.pk_f_id).subscribe(
       (data:any)=>{
         console.log(data);
         this.feedback.splice(this.feedback.indexOf(item),1);
@@ -70,7 +70,7 @@ i:number=0;
         
       );
 
-}
+  }
   }
  
 }
