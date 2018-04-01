@@ -19,6 +19,7 @@ import { LogindataService } from './logindata.service';
 import { FeedbackdataService } from "./feedbackdata.service";
 import { EmaildataService } from "./emaildata.service";
 import { CatdataService } from "./catdata.service";
+import {CombodataService  } from "./combodata.service";
 
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
@@ -36,6 +37,9 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { ForgetComponent } from './forget/forget.component';
 import { CategoryComponent } from './category/category.component';
 import { AddcatComponent } from "./addcat/addcat.component";
+import { ComboComponent } from './combo/combo.component';
+import { AddcomboComponent } from './addcombo/addcombo.component';
+
 
 
 @NgModule({
@@ -55,7 +59,10 @@ import { AddcatComponent } from "./addcat/addcat.component";
     FeedbackComponent,
     ForgetComponent,
     CategoryComponent,
-    AddcatComponent
+    AddcatComponent,
+    ComboComponent,
+    AddcomboComponent
+   
    
   ],
   imports: [
@@ -71,7 +78,7 @@ import { AddcatComponent } from "./addcat/addcat.component";
      MatTableModule,
     MatPaginatorModule
   ],
-  providers: [UserdataService,ProductdataService,OrderdataService,LogindataService,FeedbackdataService,EmaildataService,CatdataService],
+  providers: [UserdataService,ProductdataService,CombodataService,OrderdataService,LogindataService,FeedbackdataService,EmaildataService,CatdataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

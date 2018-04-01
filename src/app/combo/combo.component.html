@@ -1,0 +1,52 @@
+  
+      <app-header></app-header>
+      <div class="content-wrapper">
+        <section class="content">
+          <h1>Combos</h1>
+          <div>
+            <div class="col-sm-10">
+              <input class="form-control " [(ngModel)]="txtsearch" (keyup)="onSearch()" text name="search " placeholder="search Combo Name">
+            </div>
+            <!--<a routerLink="/adduser">Add</a>-->
+            <div class="col-sm-2">
+              <p align="right">
+                  <img src="../.././assets/glyphicons_free/glyphicons/png/glyphicons-191-plus-sign.png" routerLink="/menadd"/>
+                
+              </p>
+            </div>
+            
+          </div>
+          
+            
+      <table class="table">
+        <thead>
+          <tr>
+             <th scope="col">Select</th>
+            <th scope="col">Combo</th>
+            <th scope="col">Price</th>
+  
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of product">
+              <td>
+                  <input type="checkbox" (change)="chkchng(item)" />
+                </td>
+            <td>{{item.combo_name}}</td>
+            <td>{{item.combo_price | currency:'INR'}}</td>
+           
+         
+            <td><img src="../.././assets/glyphicons_free/glyphicons/png/glyphicons-151-edit.png" (click)="editMen(item)">   &nbsp;|&nbsp;   <img src="../.././assets/glyphicons_free/glyphicons/png/glyphicons-193-remove-sign.png" (click)="onDeleteProduct(item)"></td>
+            
+          </tr> 
+          <tr>
+            <td>
+              <button (click)="delAll()">Delete All</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>  
+      </section>
+      </div>
+

@@ -13,6 +13,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { ForgetComponent } from './forget/forget.component';
 import { CategoryComponent } from './category/category.component';
 import { AddcatComponent } from './addcat/addcat.component';
+import {ComboComponent} from "./combo/combo.component";
 
 const router:Routes=[
     {path:'',redirectTo:'/login',pathMatch:'full'},
@@ -29,7 +30,9 @@ const router:Routes=[
     {path:'feedback',component:FeedbackComponent},
     {path:'forgot',component:ForgetComponent},
     {path:'category',component:CategoryComponent},
-    {path:'addcat',component:AddcatComponent}
+    {path:'addcat',component:AddcatComponent},
+    {path:'combo',component:ComboComponent}
+
 ];
 
 export const routing=RouterModule.forRoot(router);
