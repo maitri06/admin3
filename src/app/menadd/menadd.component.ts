@@ -22,6 +22,8 @@ export class MenaddComponent implements OnInit {
   img2: string = "";
   img3: string = "";
   desci: string = "";
+  brand:string="";
+  gender:string="";
   fk_cat_id: number;
   cat: category[] = [];
 
@@ -43,7 +45,7 @@ export class MenaddComponent implements OnInit {
   }
   menadd() {
     console.log(this.fk_cat_id);
-    let item = new product( null,this.name, this.price, this.color, this.img1, this.img2, this.img3, this.desci, this.fk_cat_id);
+    let item = new product( null,this.name, this.price, this.color, this.img1, this.img2, this.img3, this.desci, this.brand,this.gender,this.fk_cat_id);
     this._data.addMen(item).subscribe(
       (data: any) => {
       

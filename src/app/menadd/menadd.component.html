@@ -43,6 +43,15 @@
       <label for="Your Name">Description</label>
       <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Description of the Product" name="mob" [(ngModel)]="desci">
     </div>
+    <div class="form-group">
+      <label for="Your Name">Product Brand</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Product Brand" name="name" [(ngModel)]="brand">
+    </div> 
+     <div class="form-group">
+      <label for="Your Name">Gender Type</label>
+      <input type="radio" [(ngModel)]="gender" id="gender" name="male" value="male"> Male
+                                            <input type="radio" name="female" [(ngModel)]="gender" id="gender" value="female"> Female
+    </div>
     <!--   <div class="form-group">
                               <label for="Your Name">Category ID</label>
                               <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Full Address" name="address" [(ngModel)]="cat_id">

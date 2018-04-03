@@ -7,6 +7,8 @@ export class product_cat {
         public pro_img2: string,
         public pro_img3: string,
         public pro_desci: string,
+        public pro_brand:string,
+        public pro_gen:string,
         public fk_cat_id: number,
         public pk_cat_id: number,
         public cat_name: string
