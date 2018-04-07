@@ -36,7 +36,7 @@ export class EditmenComponent implements OnInit {
   );
   }
   onMenUpdate(){
-    let products=new product(null,this.name,this.price,'','','','',this.desci,1);
+    let products=new product(null,this.name,this.price,'','','','',this.desci,'','',1);
     this._data.editProduct(this.id,products).subscribe(
       ()=>{
         this._router.navigate(['/products']);
