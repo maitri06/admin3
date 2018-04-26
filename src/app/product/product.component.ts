@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductdataService } from '../productdata.service';
 import { product } from './productmodel';
 import { Router } from '@angular/router';
-import { product_cat } from "./product_cat_model";
- 
+import { product_cat } from './product_cat_model';
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -18,7 +18,7 @@ export class ProductComponent implements OnInit {
   i:number=0;
 
   txtsearch:string="";
-  
+
   constructor(public _data: ProductdataService, public _router: Router) { }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class ProductComponent implements OnInit {
          this.product = data;
          this.product1 = data;
          console.log(data);
-         
+
        },
       function (e) { alert(e); },
       function () { }
@@ -36,7 +36,7 @@ export class ProductComponent implements OnInit {
     /*this._data.getAllProduct().subscribe(
       (data: any) => {
         this.product0 = data;
-        
+
       },
       function (e) { alert(e); },
       function () { }
@@ -58,12 +58,12 @@ export class ProductComponent implements OnInit {
     if(this.txtsearch!='')
     {
       this.product=this.product1.filter((x)=>x.pro_name.indexOf(this.txtsearch)!==-1);
-      
+
     }
     else
     {
-      this.product=this.product1; 
-      
+      this.product=this.product1;
+
     }
   }
 
@@ -81,29 +81,29 @@ export class ProductComponent implements OnInit {
 
   delAll()
   {
-    
+
      console.log(this.delarr);
       if(confirm("Are You Sure want to delete?"))
       {
       this._data.delAllProd(this.delarr).subscribe(
-        
+
           (data:any)=>{
-            
+
             for(this.i=0 ; this.i<this.delarr.length ; this.i++)
             {
-               
+
                    this.product.splice(this.product.indexOf(this.delarr[this.i]),1);
-                 
+
             }
-            
-          
+
+
           },
           function(err){console.log(err);},
           function(){
 
             console.log("Complete");
           }
-        
+
       );
 
 }
